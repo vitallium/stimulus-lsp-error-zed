@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= content_for(:title) || "Stimulus Lsp Error" %></title>
+    <title><%= content_for?(:title) ? strip_tags(yield(:title)) : "Stimulus Lsp Error" %></title>
+    <meta name="apple-mobile-web-app-title" content="Stimulus Lsp Error">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
